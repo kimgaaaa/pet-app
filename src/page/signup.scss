@@ -1,0 +1,42 @@
+.signWrap{
+    width: 1000px;
+    margin: 50px auto;
+    h2{
+        border-bottom: 3px double #666;
+    }
+    .signUpArea{
+        border: none;
+        ul{
+            margin-top: 20px;
+            li{
+                .area-style{
+                    margin-bottom: 20px;
+                    label{
+                        display: block;
+                        margin-bottom: 5px;
+                        color: #575757;
+                    }
+                    input{
+                        width: 100%;
+                        box-sizing: border-box;
+                        padding: 20px 30px;
+                        border: 1px solid #ddd;
+                    }
+                    .mes-stlye{
+                        font-size: 12px;            
+                    }
+                    .error-color{
+                        color: #f00;
+                    }
+                    .success-color{
+                        color: green;
+                    }
+                    .help-style{
+                        font-size: 12px;
+                        color: rgb(105,105,105);
+                    }
+                }
+            }
+        }
+    }
+}

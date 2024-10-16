@@ -10,6 +10,14 @@ const Header = () => {
                     <Link to="/"><img src={process.env.PUBLIC_URL+"./img/logo.png"} alt="" /></Link>
                 </div>
                 <div className="nav">
+                    <ul className='signUpandlogin'>
+                        <li>
+                            <Link to="">로그인</Link>
+                        </li>
+                        <li>
+                            <Link to="/signup">회원가입</Link>
+                        </li>
+                    </ul>
                     <ul>
                         <li>
                             <Link to="/">Home</Link>

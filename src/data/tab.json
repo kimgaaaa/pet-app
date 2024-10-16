@@ -52,6 +52,12 @@
         "imageUrl":"/img/dog04.jpg",
         "description":"발랄한 강아지",
         "category":"dog"
+    },
+    {
+        "id":10,
+        "imageUrl":"/img/dog05.jpg",
+        "description":"발랄한 강아지",
+        "category":"dog"
     }
 
 ]
