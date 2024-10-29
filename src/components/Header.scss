@@ -43,6 +43,10 @@
                         width: 0;
                     }
                 }
+                .sign{
+                    &.none{display: none;}
+                    .show{display: block;}
+                }
             }
             ul{
                 display: flex;

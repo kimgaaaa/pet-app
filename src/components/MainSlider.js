@@ -25,9 +25,9 @@ const MainSlider = () => {
          onSlideChange={() => console.log('slide change')}
          onSwiper={(swiper) => console.log(swiper)}
          >
-            <SwiperSlide><img src={process.env.PUBLIC_URL + './img/slider01.jpg'} alt="" /></SwiperSlide>
-            <SwiperSlide><img src={process.env.PUBLIC_URL + './img/slider02.png'} alt="" /></SwiperSlide>
-            <SwiperSlide><img src={process.env.PUBLIC_URL + './img/slider03.jpg'} alt="" /></SwiperSlide>
+            <SwiperSlide><img src={process.env.PUBLIC_URL + '/img/slider01.jpg'} alt="" /></SwiperSlide>
+            <SwiperSlide><img src={process.env.PUBLIC_URL + '/img/slider02.png'} alt="" /></SwiperSlide>
+            <SwiperSlide><img src={process.env.PUBLIC_URL + '/img/slider03.jpg'} alt="" /></SwiperSlide>
          </Swiper>
       </div>
    );

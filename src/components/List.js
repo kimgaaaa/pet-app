@@ -32,14 +32,14 @@ const List = () => {
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
                 >
-                <SwiperSlide><img src={process.env.PUBLIC_URL+'../img/img01.jpg'} alt="" /></SwiperSlide>
-                <SwiperSlide><img src={process.env.PUBLIC_URL+'../img/img02.jpg'} alt="" /></SwiperSlide>
-                <SwiperSlide><img src={process.env.PUBLIC_URL+'../img/img03.jpg'} alt="" /></SwiperSlide>
-                <SwiperSlide><img src={process.env.PUBLIC_URL+'../img/img04.jpg'} alt="" /></SwiperSlide>
-                <SwiperSlide><img src={process.env.PUBLIC_URL+'../img/img05.jpg'} alt="" /></SwiperSlide>
-                <SwiperSlide><img src={process.env.PUBLIC_URL+'../img/img06.jpg'} alt="" /></SwiperSlide>
-                <SwiperSlide><img src={process.env.PUBLIC_URL+'../img/img07.jpg'} alt="" /></SwiperSlide>
-                <SwiperSlide><img src={process.env.PUBLIC_URL+'../img/img08.jpg'} alt="" /></SwiperSlide>
+                <SwiperSlide><img src={process.env.PUBLIC_URL+'/img/img01.jpg'} alt="" /></SwiperSlide>
+                <SwiperSlide><img src={process.env.PUBLIC_URL+'/img/img02.jpg'} alt="" /></SwiperSlide>
+                <SwiperSlide><img src={process.env.PUBLIC_URL+'/img/img03.jpg'} alt="" /></SwiperSlide>
+                <SwiperSlide><img src={process.env.PUBLIC_URL+'/img/img04.jpg'} alt="" /></SwiperSlide>
+                <SwiperSlide><img src={process.env.PUBLIC_URL+'/img/img05.jpg'} alt="" /></SwiperSlide>
+                <SwiperSlide><img src={process.env.PUBLIC_URL+'/img/img06.jpg'} alt="" /></SwiperSlide>
+                <SwiperSlide><img src={process.env.PUBLIC_URL+'/img/img07.jpg'} alt="" /></SwiperSlide>
+                <SwiperSlide><img src={process.env.PUBLIC_URL+'/img/img08.jpg'} alt="" /></SwiperSlide>
                 </Swiper>
                 </div>
             </div>
