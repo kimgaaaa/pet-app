@@ -118,12 +118,24 @@ const SignUpForm = () => {
       }
    }
 
-
    const handleId = (event) =>{
       const newValue= event.target.value;
       setId(newValue)
       if(idRule.test(newValue)){
-         handleMessageChange('id', '사용 가능한 아이디입니다', 'success-color');
+         axios.get(`${API_URL}/users/${id}`)
+         .then((result)=>{
+            const user_info =result.data;
+            if(!user_info.user){
+               handleMessageChange('id', '사용 가능한 아이디입니다', 'success-color');
+            }else{
+               handleMessageChange('id', '아이디 중복됩니다.', 'error-color');
+               setId('');
+            }
+         })
+         .catch((error)=>{
+            console.log(error)
+         })
+         
       }else if(newValue===""){
          handleMessageChange('id', '아이디를 입력해주세요', 'error-color');
       }else{
@@ -131,6 +143,7 @@ const SignUpForm = () => {
          setId('');
       }
    }
+   
    const handlePw = (event) =>{
       const newPwValue= event.target.value;
       setPw(newPwValue)

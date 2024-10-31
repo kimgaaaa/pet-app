@@ -27,7 +27,7 @@
                 right: 20px;
                 li{
                     a{
-                        font-size: 13px;
+                        font-size: 14px;
                         position: relative;
                         &:after{
                             content:"";
@@ -43,16 +43,33 @@
                         width: 0;
                     }
                 }
-                .sign{
-                    &.none{display: none;}
-                    .show{display: block;}
+                .user-info{
+                    font-size: 14px;
+                    position: relative;
+                    padding-right: 10px;
+                    &:after{
+                        content:"";
+                        width: 1px;
+                        height: 10px;
+                        background: #3e3e3e;
+                        position: absolute;
+                        top: 4px;
+                        right: 0;
+                    }
+                }
+                .logout{
+                    font-size: 14px;
+                    padding-left: 10px;
                 }
             }
             ul{
                 display: flex;
                 list-style: none;
+                
                 li{
+                    
                     a{
+                        
                         text-decoration: none;
                         color: #424242;
                         padding: 10px 20px;

@@ -3,31 +3,32 @@ import {Button, Checkbox, Form, Input} from "antd";
 import {API_URL} from "../config/constants";
 import axios from 'axios';
 import {  useNavigate } from 'react-router-dom';
+import { useAccessToken } from './AccessTokenContext';
 import './login.scss';
 
 const Login = () => {
    const navigate=useNavigate();
+   const {setAccessToken}=useAccessToken();
    const [loading, setLoading]=useState(false); //로딩 상태
 
    const onFinish = async (values) =>{
       setLoading(true)
       try{
-         axios.post(`${API_URL}/users/login`,{
+         const result =await axios.post(`${API_URL}/users/login`,{
             user_id:values.user_id,
             pw:values.password,
-         })
-         .then((result)=>{
-            console.log(result);
-            if(result.data.user===values.user_id){
-               alert("로그인이 성공했습니다.");
-               navigate('/');
-            }else{
-               alert("로그인 정보를 다시 확인해주세요")
-            }
-         })
-         .catch((err)=>{
-            console.error(err)
-         })
+         });
+
+         if(result.data.user === values.user_id){
+            alert("로그인이 성공했습니다.");
+            setAccessToken(result.data.accessToken);
+            localStorage.setItem('accessToken',result.data.accessToken )
+            navigate('/');
+         }else{
+            alert("로그인 정보를 다시 확인해주세요")
+         }
+         
+         
       } catch(error){
          console.error(error)
       }finally{
@@ -59,7 +60,7 @@ const Login = () => {
                </Form.Item>
 
                <Form.Item wrapperCol={{offset:8, span:16}}>
-                  <Button type="primary" htmlType='submit'>로그인</Button>
+                  <Button type="primary" htmlType='submit' loading={loading}>로그인</Button>
                </Form.Item>
             </Form>   
          </div>
